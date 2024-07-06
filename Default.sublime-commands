@@ -1,0 +1,59 @@
+  // sublime text's docs
+[
+  { "caption": "Docs: Sublime official", "command": "open_url", "args": { "url": "http://www.sublimetext.com/docs/3/" } },
+  { "caption": "Docs: Sublime unofficial", "command": "open_url", "args": { "url": "https://docs.sublimetext.info/" } },
+  { "caption": "Docs: Sublime Community docs", "command": "open_url", "args": { "url": "https://docs.sublimetext.io/guide/" } },
+  { "caption": "Docs: Sublime API references", "command": "open_url", "args": { "url": "http://www.sublimetext.com/docs/api_reference.html" } },
+
+  // tailwind docs
+  { "caption": "Docs: Tailwind", "command": "open_url", "args": { "url": "https://tailwindcss.com/docs/installation" } },
+  { "caption": "Docs: Tailwind cheat sheet", "command": "open_url", "args": { "url": "https://tailwindcomponents.com/cheatsheet/" } },
+
+  // jQuery docs
+  { "caption": "Docs: jQuery", "command": "open_url", "args": { "url": "https://api.jquery.com/" } },
+
+  // boostrap 5 docs
+  { "caption": "Docs: Boostrap 5", "command": "open_url", "args": { "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/" } },
+
+  { "caption": "Package control: Find in browser", "command": "open_url", "args": { "url": "https://packagecontrol.io/" } },
+
+  { "caption": "Developer: New Plugin", "command": "new_plugin" },
+  { "caption": "Developer: New Snippet", "command": "new_snippet" },
+  { "caption": "Developer: New Syntax", "command": "new_syntax" },
+
+  // for testing plugins
+  {
+    "caption": "Simple command",
+    "command": "simple",
+    "args": {
+      // "position": 10,
+      "message": "Hi there!",
+    }
+  },
+
+  // actual custom plugins
+  { "caption": "HTML entities: insert", "command": "insert_html_entities" },
+  { "caption": "HTML entities: encode", "command": "encode_html_entities" },
+  { "caption": "HTML entities: decode", "command": "decode_html_entities" },
+  { "caption": "Markdown: convert to DMOJ", "command": "convert_to_dmoj" },
+  { "caption": "Markdown: restore from DMOJ", "command": "restore_from_dmoj" },
+  { "caption": "Select all comments", "command": "select_all_comments" },
+  { "caption": "New file in directory of current view", "command": "new_file_in_directory_of_current_view" },
+  { "caption": "Clear console", "command": "clear_console" },
+  { "caption": "Move file one level up", "command": "move_file_up", "args": { "level": 1 } },
+  {
+    "caption": "Pyf: split arguments into lines",
+    "command": "format_function_call_arguments",
+    "args": {
+      "option": "split",
+    },
+  },
+  {
+    "caption": "Pyf: join arguments into a single line",
+    "command": "format_function_call_arguments",
+    "args": {
+      "option": "join",
+    },
+  },
+  { "caption": "Pyf: sort imports", "command": "sort_python_imports" },
+]

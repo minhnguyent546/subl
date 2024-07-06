@@ -1,0 +1,34 @@
+[
+  // custom section
+  {
+    "id": "help",
+    "children": [
+      { "caption": "-" },
+      {
+        "caption": "Sublime docs",
+        "children": [
+          {
+            "caption": "Official docs",
+            "command": "open_url",
+            "args": { "url": "http://www.sublimetext.com/docs/3/" }
+          },
+          {
+            "caption": "Unofficial docs",
+            "command": "open_url",
+            "args": { "url": "https://docs.sublimetext.info/" }
+          },
+          {
+            "caption": "Community docs",
+            "command": "open_url",
+            "args": { "url": "https://docs.sublimetext.io/guide/" }
+          },
+          {
+            "caption": "API references",
+            "command": "open_url",
+            "args": { "url": "http://www.sublimetext.com/docs/api_reference.html" }
+          },
+        ],
+      }
+    ],
+  },
+]
