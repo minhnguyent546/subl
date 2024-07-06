@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+def main():
+    $0
+
+
+if __name__ == '__main__':
+    main()
+]]></content>
+    <tabTrigger>dmain</tabTrigger>
+    <scope>source.python</scope>
+    <description>declare main function</description>
+ </snippet>

@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+import torch.nn as nn$0
+]]></content>
+    <tabTrigger>inn</tabTrigger>
+    <scope>source.python</scope>
+    <description>import torch.nn as nn</description>
+ </snippet>
+

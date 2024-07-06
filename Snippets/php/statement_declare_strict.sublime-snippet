@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+declare(strict_types=1);
+]]></content>
+    <tabTrigger>strict</tabTrigger>
+    <scope>source.php</scope>
+    <description>enable strict_types</description>
+ </snippet>

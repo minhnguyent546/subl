@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+class ${1:ModuleName}(nn.Module):
+    def __init__(self, $2):
+        super().__init__()
+        $3
+        
+    def forward(self, x: Tensor) -> Tensor:
+        return x
+
+]]></content>
+    <tabTrigger>nnmod</tabTrigger>
+    <scope>source.python</scope>
+    <description>Create a nn.Module class</description>
+ </snippet>

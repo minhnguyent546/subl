@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+require ${1:__DIR__ . }'${2:path/to/file}';$0
+]]></content>
+    <tabTrigger>require</tabTrigger>
+    <scope>source.php</scope>
+    <description>require statement</description>
+ </snippet>

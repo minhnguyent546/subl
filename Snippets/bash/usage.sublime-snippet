@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+function usage() {
+  cat << EOF
+Usage: ${1:script-name} [options...] <files...>
+
+Available options:
+  -h, --help              Show this help
+  -v, --version           Display version
+EOF
+}$0
+]]></content>
+    <tabTrigger>func_usage</tabTrigger>
+    <scope>source.shell</scope>
+    <description>usage function</description>
+ </snippet>

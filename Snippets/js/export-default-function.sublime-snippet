@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+const ${1:Name} = $2
+
+export default ${1:function};
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>exfn</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html, source.js, source.ts</scope>
+    <description>Export default function</description>
+</snippet>

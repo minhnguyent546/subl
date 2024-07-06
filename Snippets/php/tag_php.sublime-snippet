@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+<?php $0?>
+]]></content>
+    <tabTrigger>php</tabTrigger>
+    <scope>source.php, embedding.php, text.html.basic</scope>
+    <description>PHP tag - &lt;?php ?&gt;</description>
+ </snippet>

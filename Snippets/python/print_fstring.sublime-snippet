@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+print(f"\{${1:var} = \}")$0
+]]></content>
+    <tabTrigger>flog</tabTrigger>
+    <scope>source.python</scope>
+    <description>debug print with f-string</description>
+ </snippet>

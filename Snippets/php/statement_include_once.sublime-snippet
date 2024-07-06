@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+include_once ${1:__DIR__ . }'${2:path/to/file}';$0
+]]></content>
+    <tabTrigger>include_once</tabTrigger>
+    <scope>source.php</scope>
+    <description>include_once statement</description>
+ </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+public function ${1:foo}($2) {}
+]]></content>
+    <tabTrigger>pf</tabTrigger>
+    <scope>source.php</scope>
+    <description>pubic function funcName(...) {...}</description>
+ </snippet>

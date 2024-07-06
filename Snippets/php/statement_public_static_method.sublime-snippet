@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+public static function ${1:foo}($2) {}
+]]></content>
+    <tabTrigger>psf</tabTrigger>
+    <scope>source.php</scope>
+    <description>pubic static function funcName(...) {...}</description>
+ </snippet>

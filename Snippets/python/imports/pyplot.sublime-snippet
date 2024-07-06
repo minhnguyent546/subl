@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+from matplotlib import pyplot as plt$0
+]]></content>
+    <tabTrigger>iplt</tabTrigger>
+    <scope>source.python</scope>
+    <description>from matplotlib import pyplot as plt</description>
+ </snippet>

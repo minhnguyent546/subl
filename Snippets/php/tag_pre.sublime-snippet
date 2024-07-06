@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+echo '<pre>';
+$1
+echo '</pre>';
+]]></content>
+    <tabTrigger>pre</tabTrigger>
+    <scope>source.php, embedding.php, text.html.basic</scope>
+    <description>HTML &lt;pre&gt;&lt;/pre&gt; tag</description>
+ </snippet>
