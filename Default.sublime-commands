@@ -38,7 +38,14 @@
   { "caption": "Markdown: convert to DMOJ", "command": "convert_to_dmoj" },
   { "caption": "Markdown: restore from DMOJ", "command": "restore_from_dmoj" },
   { "caption": "Select all comments", "command": "select_all_comments" },
-  { "caption": "New file in directory of current view", "command": "new_file_in_directory_of_current_view" },
+  { "caption": "New file in directory of the current view", "command": "new_file_in_directory_of_the_current_view" },
+  {
+    "caption": "Duplicate file",
+    "command": "new_file_in_directory_of_the_current_view",
+    "args": {
+      "duplicate_file": true,
+    },
+  },
   { "caption": "Clear console", "command": "clear_console" },
   { "caption": "Move file one level up", "command": "move_file_up", "args": { "level": 1 } },
   {

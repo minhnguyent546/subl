@@ -1,39 +1,85 @@
 [
-	{ "keys": ["ctrl+shift+s"], "command": "auto_save" },
-	{ "keys": ["ctrl+tab"], "command": "next_view" },
-	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
-	// { "keys": ["ctrl+m"], "command": "markdown_preview", "args": {"target": "browser"} },
+    { "keys": ["ctrl+shift+s"], "command": "auto_save" },
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+    // { "keys": ["ctrl+m"], "command": "markdown_preview", "args": {"target": "browser"} },
     { "keys": ["ctrl+m"], "command": "markdown_preview_select", "args": {"target": "browser"} },
-	{ "keys": ["ctrl+e"], "command": "toggle_side_bar" },
-	{ "keys": ["ctrl+shift+i"], "command": "find_all_under" },
+    { "keys": ["ctrl+e"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+shift+i"], "command": "find_all_under" },
 
-	// { "keys": ["ctrl+b", "ctrl+l"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-	// { "keys": ["ctrl+e", "ctrl+l"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+    // { "keys": ["ctrl+b", "ctrl+l"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+    // { "keys": ["ctrl+e", "ctrl+l"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 
-	// building
-	{ "keys": ["ctrl+b"], "command": "build" },
+    // building
+    { "keys": ["ctrl+b"], "command": "build" },
 
     { "keys": ["ctrl+t"], "command": "new_file" },
 
-	{
-		"keys": ["alt+shift+2"],
-		"command": "set_layout",
-		"args":
-		{
-			"cols": [0.0, 0.5, 1.0],
-			"rows": [0.0, 1.0],
-			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
-		}
-	},
-	{ "keys": ["ctrl+alt+f"], "command": "js_prettier" },
+    // set layout
+    {
+        /*
+        ---------------
+        |      |      |
+        |      |      |
+        |      --------
+        |      |      |
+        |      |      |
+        ---------------
+         */
+        "keys": ["alt+shift+4"],
+        "command": "set_layout",
+        "args": {
+            "cells": [[0, 0, 1, 2], [1, 0, 2, 1], [1, 1, 2, 2]],
+            "cols": [0.0, 0.5, 1],
+            "rows": [0.0, 0.5, 1],
+        },
+    },
+    {
+        /*
+        ---------------
+        |      |      |
+        |      --------
+        |      |      |
+        |      --------
+        |      |      |
+        ---------------
+         */
+        "keys": ["alt+shift+5"],
+        "command": "set_layout",
+        "args": {
+            "cells": [[0, 0, 1, 3], [1, 0, 2, 1], [1, 1, 2, 2], [1, 2, 2, 3]],
+            "cols": [0.0, 0.5, 1],
+            "rows": [0.0, 0.333, 0.667, 1],
+        },
+    },
+    {
+        /*
+        ---------------
+        |             |
+        |             |
+        |--------------
+        |             |
+        |             |
+        ---------------
+        */
+        "keys": ["alt+shift+6"],
+        "command": "set_layout",
+        "args": {
+            "cells": [[0, 0, 1, 1], [0, 1, 1, 2]],
+            "cols": [0.0, 1.0],
+            "rows": [0.0, 0.5, 1],
+        },
+    },
 
-	// settings for emmet
-		// Go to Matching Tag/Tag Pair
+    { "keys": ["ctrl+alt+f"], "command": "js_prettier" },
+
+    // settings for emmet
+        // Go to Matching Tag/Tag Pair
     {
         "keys": ["ctrl+alt+j"],
         "command": "emmet_go_to_tag_pair"
     },
-    	// Increment/Decrement Number
+        // Increment/Decrement Number
     {
         "keys": ["alt+up"],
         "command": "emmet_increment_number",
@@ -44,25 +90,25 @@
         "command": "emmet_increment_number",
         "args": { "delta": -1 }
     },
-	    // Balance Outward
+        // Balance Outward
     {
         "keys": ["ctrl+,"],
         "command": "emmet_balance",
         "args": { "direction": "outward" }
     },
 
-	    // Balance Inward
+        // Balance Inward
     {
         "keys": ["ctrl+shift+0"],
         "command": "emmet_balance",
         "args": { "direction": "inward" }
     },
-	    // Remove Tag
+        // Remove Tag
     {
         "keys": ["shift+ctrl+;"],
         "command": "emmet_remove_tag"
     },
-	    // Wrap with Abbreviation
+        // Wrap with Abbreviation
     {
         "keys": ["shift+ctrl+g"],
         "command": "emmet_wrap_with_abbreviation",
@@ -127,7 +173,15 @@
 
     {
         "keys": ["ctrl+alt+n"],
-        "command": "new_file_in_directory_of_current_view",
+        "command": "new_file_in_directory_of_the_current_view",
+    },
+
+    {
+        "keys": ["ctrl+alt+t"],
+        "command": "new_file_in_directory_of_the_current_view",
+        "args": {
+            "duplicate_file": true,
+        },
     },
 
     {
@@ -142,4 +196,20 @@
     { "keys": ["ctrl+shift++"], "command": "increase_view_font_size" },
     { "keys": ["ctrl+shift+="], "command": "increase_view_font_size" },
     { "keys": ["ctrl+shift+-"], "command": "decrease_view_font_size" },
+
+    { "keys": ["ctrl+alt+p"], "command": "sort_python_imports" },
+    {
+        "keys": ["ctrl+alt+s"],
+        "command": "format_function_call_arguments",
+        "args": {
+            "option": "split",
+        },
+    },
+    {
+        "keys": ["ctrl+alt+j"],
+        "command": "format_function_call_arguments",
+        "args": {
+            "option": "join",
+        },
+    },
 ]
