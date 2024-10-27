@@ -1,4 +1,4 @@
-"""Create new file in the same directory of the current view."""
+"""Create new file/Duplicate file in the same directory of the current view."""
 
 import sublime
 import sublime_plugin
@@ -49,7 +49,7 @@ class FileNameInputHandler(sublime_plugin.TextInputHandler):
         return len(text) > 0
 
 
-class NewFileInDirectoryOfCurrentViewCommand(sublime_plugin.WindowCommand):
+class NewFileInDirectoryOfTheCurrentViewCommand(sublime_plugin.WindowCommand):
     def is_enabled(self) -> bool:
         """
         The command will be enabled if there is a view in the window and
@@ -63,7 +63,7 @@ class NewFileInDirectoryOfCurrentViewCommand(sublime_plugin.WindowCommand):
 
         return True
 
-    def run(self, file_name: str):
+    def run(self, file_name: str, duplicate_file: bool = False):
         view = self.window.active_view()
         assert view is not None
 
@@ -81,8 +81,17 @@ class NewFileInDirectoryOfCurrentViewCommand(sublime_plugin.WindowCommand):
             new_dirname = os.path.dirname(new_file_path)
             if not os.path.exists(new_dirname):
                 os.makedirs(new_dirname)
-            open(new_file_path, 'w').close()
-            self.window.status_message('Created file at: ' + new_file_path)
+            open(new_file_path, 'w').close()  # create new file
+
+            # how do I copy the content of the current view to the new file?
+            if duplicate_file:
+                with open(cur_view_file_name, 'r') as f:
+                    content = f.read()
+                    with open(new_file_path, 'w') as new_f:
+                        new_f.write(content)
+                self.window.status_message('Duplicated file: ' + new_file_path)
+            else:
+                self.window.status_message('Created file: ' + new_file_path)
             self.window.open_file(new_file_path)
 
         except OSError as e:
