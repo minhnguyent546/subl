@@ -11,8 +11,11 @@ import sublime_plugin
 class SortPythonImportsCommand(sublime_plugin.TextCommand):
     def is_enabled(self) -> bool:
         settings = self.view.settings()
-        python_syntax = 'Packages/Python/Python.sublime-syntax'
-        return settings.get('syntax') == python_syntax
+        python_syntaxes = [
+            'Packages/Python/Python.sublime-syntax',
+            'Packages/User/Python-custom.sublime-syntax',
+        ]
+        return settings.get('syntax') in python_syntaxes
 
     def run(self, edit: sublime.Edit): 
         regions = self.view.find_by_selector('meta.statement.import')
@@ -78,13 +81,10 @@ class SortPythonImportsCommand(sublime_plugin.TextCommand):
             section_assoc_comments = [assoc_comment for _, assoc_comment in import_section_region]
 
             # TODO: assume that section_content contains only import statements
-            # TODO: ast.parse will not take into account comments (i.e. all comments will be gone)
             try:
                 tree = ast.parse(section_content)
-            except SyntaxError as e:
-                raise ValueError(f'Failed to parse import section: {e}')
-            except Exception as e:
-                raise ValueError(f'Failed to parse import section: {e}')
+            except (SyntaxError, Exception) as e:
+                print(f'Failed to parse import section: {e}')
 
             for node in tree.body:
                 if not isinstance(node, (ast.Import, ast.ImportFrom)):
